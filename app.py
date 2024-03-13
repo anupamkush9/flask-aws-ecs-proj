@@ -7,12 +7,12 @@ app = Flask(__name__)
 # Route to the root URL
 @app.route('/')
 def hello():
-    return 'Hello, Flask on Docker!'
+    return 'hello, Welcome to home page!'
 
 # Route to a custom endpoint
-@app.route('/greet/<name>')
-def greet(name):
-    return f'Hello, {name}! Welcome to Flask on Docker.'
+@app.route('/health')
+def health():
+    return f'Health is Okay....'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
